@@ -1,0 +1,9 @@
+DEPENDENCIES
+  adinauer-test-cookbook
+    path: .
+    metadata: true
+  apt
+
+GRAPH
+  adinauer-test-cookbook (0.1.0)
+  apt (2.6.0)
