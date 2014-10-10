@@ -1,16 +1,14 @@
-driver:
-  name: vagrant
+driver_plugin: vagrant
 
-provisioner:
-  name: chef_solo
+driver_config:
+  require_chef_omnibus: true
 
 platforms:
   - name: ubuntu-12.04
+    run_list:
+    - recipe[apt::default]
 
 suites:
-  - name: default-recipe
+  - name: default-recipe-test-suite
     run_list:
     - recipe[adinauer-test-cookbook::default]
-    includes: [
-      'ubuntu-12.04',
-    ]
