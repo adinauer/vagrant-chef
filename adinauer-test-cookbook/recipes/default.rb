@@ -6,7 +6,7 @@
 #
 # All rights reserved - Do Not Redistribute
 #
-template "/vagrant/hello.txt" do
+template "/home/vagrant/hello.txt" do
 	source "mytemplate.erb"
 	variables({
 		:who => node[:who]
